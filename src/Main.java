@@ -1,23 +1,20 @@
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        Bank bank = new Bank();
 
-        Customer j = new Customer("Jarek");
+        bank.newBankCustomer("Jarek", 0);
+        bank.newBankCustomer("Barbara", 500);
+        bank.newBankCustomer("Jurek", 300);
+        bank.newBankCustomer("Czesia", 999);
+        bank.listCustomers(true);
 
-        System.out.println(j.toString());
+        bank.addCustomerTransaction("Jarek", 100);
 
-        j.deposit(100);
-
-        System.out.println(j.toString());
-
-        j.deposit(20);
-
-        System.out.println(j.toString());
-
-        j.withDraw(120);
-
-        System.out.println(j.toString());
+        bank.listCustomers(true);
 
     }
 }
